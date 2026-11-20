@@ -35,6 +35,9 @@ from pathlib import Path
 
 INPUT_DIR = Path(os.environ.get("MAKEFUN_INPUT_DIR", "/input"))
 OUTPUT_DIR = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+# Entry contract (gta6-trophy-rarity-forecast-01): main.py is the only
+# entrypoint; it reads every *.in in the input dir and writes one .out
+# per case, always valid, deterministic, under 8 seconds per case.
 
 LEVELS = [0.05, 0.25, 0.5, 0.75, 0.95]
 Z = [-1.645, -0.674, 0, 0.674, 1.645]
